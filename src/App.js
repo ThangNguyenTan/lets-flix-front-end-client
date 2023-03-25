@@ -136,7 +136,7 @@ class App extends React.Component {
     return (
       <div className="App">
         
-      <IdleTimer
+      {/* <IdleTimer
           ref={ref => { this.idleTimer = ref }}
           timeout={1000 * 60 * 10}
           //timeout={1000 * 60 * 0.4}
@@ -144,7 +144,7 @@ class App extends React.Component {
           onIdle={this.handleOnIdle}
           onAction={this.handleOnAction}
           debounce={250}
-        />
+        /> */}
       <AnimatePresence exitBeforeEnter>
         <Router>
         <ScrollToTop>
