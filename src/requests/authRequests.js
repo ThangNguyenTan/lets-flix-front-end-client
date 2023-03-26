@@ -379,17 +379,19 @@ export const refreshSession = async () => {
 export const validatePaidUser = async () => {
     const auth = await getAuthStatus();
     const sub = await getSubStatus();
-    const sess = await validateSession();
+    // const sess = await validateSession();
 
-    return auth && sub && sess;
+    // return auth && sub && sess;
+    return auth && sub;
 }
 
 export const validateFreeUser = async () => {
     const auth = await getAuthStatus();
     const sub = await getSubStatus();
-    const sess = await validateSession();
+    // const sess = await validateSession();
 
-    return auth && !sub && sess;
+    // return auth && !sub && sess;
+    return auth && !sub;
 }
 
 export const sessionAutoRefreshMechanic = async () => {
