@@ -64,6 +64,10 @@ function login(email, password) {
         body: JSON.stringify({ email, password })
     };
 
+    fetch(`${MAIN_PROXY_URL}/sessions`)
+        .then(handleResponse)
+        .then(data => {})
+
     message.loading("Logging in...", 0);
     return fetch(`${MAIN_PROXY_URL}/customers/login`, requestOptions)
         .then(handleResponse)

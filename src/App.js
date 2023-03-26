@@ -64,10 +64,10 @@ class App extends React.Component {
       authenticationService.currentUser.subscribe(x => this.setState({
           currentUser: x
       }));
-      // await sessionAutoRefreshMechanic();
-      // setInterval(() => {
-      //   this.handlePauseIdleOnLoad();
-      // }, 30 * 1000);
+      await sessionAutoRefreshMechanic();
+      setInterval(() => {
+        this.handlePauseIdleOnLoad();
+      }, 30 * 1000);
   }
 
   logout() {
